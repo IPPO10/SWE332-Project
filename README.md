@@ -1,10 +1,10 @@
 # Fitness Hub
 
 ## Team Members
-- Yazid Hassan Ahmed — 2203513631
-- Salman Raid — 2203513483
-- Yusuf Yusuf Kabiru — 2203513482
-- Ibrahim Alesayi — 2203513703
+- Yazid Hassan Ahmed — 230513611
+- Salman Raid — 230513483
+- Yusuf Yusuf Kabiru — 2303513482
+- Ibrahim Alesayi — 230513703
 
 ## 1. What will your software do?
 Fitness Hub will be a web-based fitness and health tracking system. It will help users monitor their daily physical activity and manage basic fitness information such as steps taken and calories burned. The main goal of the system is to encourage a healthier lifestyle by giving users a simple way to view and track their activity.
