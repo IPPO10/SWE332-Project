@@ -1,76 +1,56 @@
-# SWE332-Project
+# Fitness Hub
 
+## Team Members
+- Yazid Hassan Ahmed — 2203513631
+- Salman Raid — 2203513483
+- Yusuf Yusuf Kabiru — 2203513482
+- Ibrahim Alesayi — 2203513703
 
+## 1. What will your software do?
+Fitness Hub will be a web-based fitness and health tracking system. It will help users monitor their daily physical activity and manage basic fitness information such as steps taken and calories burned. The main goal of the system is to encourage a healthier lifestyle by giving users a simple way to view and track their activity.
 
-• Names:
+## 2. What features will it have?
+The system is planned to include the following features:
+- Step tracking
+- Calorie calculation or estimation
+- Daily activity monitoring
+- User input for personal fitness data
+- A simple dashboard to display progress
+- A clean and easy-to-use interface
 
-• Yazid Hassan Ahmed     #230513611
+## 3. How will it be executed?
+The project will be executed as a web-based system instead of a mobile application. Users will access it through a web browser. The team decided to build it as a website because it is easier for development, testing, and collaboration among team members using different devices and operating systems.
 
-• Salman Raid            #230513483
+## 4. What new skills will you need to acquire?
+To complete this project, the team will need to improve skills in:
+- Web application development
+- Frontend design
+- Team collaboration using GitHub
+- Writing software architecture documents
+- Planning and dividing project tasks clearly
 
-• Yusuf Yusuf Kabiru     #230513482
+## 5. What topics will you need to research?
+The team will need to research:
+- Fitness tracking systems
+- Calorie estimation methods
+- Step tracking logic
+- User interface design for health-related systems
+- Web-based software architecture
+- Tools and technologies suitable for the project
 
-• Ibrahim Alesayi        #230513703
+## 6. In your team, who will do what?
+The work in the team will be divided based on documentation, design, development, and coordination.
 
+- Yazid Hassan Ahmed: research and documentation support
+- Salman Raid: interface design and frontend support
+- Yusuf Yusuf Kabiru: README, project coordination, and documentation updates
+- Ibrahim Alesayi: development support and feature implementation
 
+The team will also collaborate together when making important decisions about the project architecture and scope.
 
-###### **1.What will your software do? What features will have it be executed?**
+## 7. What might you consider to be a good outcome for your project? A better outcome? The best outcome?
+A good outcome would be to complete a working web-based fitness system with the main planned features and proper documentation.
 
+A better outcome would be to create a system that is not only functional, but also easy to use, well organized, and clearly structured in terms of architecture and design.
 
-
-• It is a Health \& Fitness app that measures your calories per day by
-
-knowing how much steps you made. It helps you in your diet or health
-
-care by informing you your calories per day.
-
- 
-
-###### **2.What new skills will you need to acquire? What topic will you need to**
-
-###### **research?**
-
- 
-
-. Understand our, improve working as a team and start making what
-
-we learned into a real project. We need to research about how to
-
-measure the calories per steps with the respect of person weight and
-
-height.
-
-
-
-###### **3.Who will do what?**
-
- 
-
-Yusuf will do the research and get our sources while Yazid and
-
-Salman will do the coding part and Ibrahim will create the app and
-
-arrange it and make our UML DIAGRAMS.
-
- 
-
-###### **4.What might you consider to be a good outcome for our project? A**
-
-###### **better outcome? The best outcome?**
-
- 
-
-Good Outcome: A functional app where a user can sign up, log a workout, and see their daily goals calculated correctly.
-
-
-
-Better Outcome: The app syncs successfully with external health data (like steps from a phone) and displays beautiful progress charts
-
-  over a 7-day period.
-
-
-
-Best Outcome: A fully polished, bug-free application with a "pro" feel, featuring a clean UI, and perhaps
-
-  a unique AI-driven suggestion feature for workouts.
-
+The best outcome would be to deliver a complete and polished project with a user-friendly interface, reliable core features, clear architecture documentation, and successful teamwork throughout the development process.
