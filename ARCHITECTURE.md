@@ -29,10 +29,34 @@ This approach helps ensure that the system is easy to maintain, scalable for fut
 - The system will focus on core features only (steps and calorie estimation)
 
 ## 5. Logical Architecture
-(To be filled)
+The Fitness Hub system is divided into three main components, where each component has a specific role in the system.
+
+1. Frontend (User Interface)
+This is the part that the user interacts with directly. It allows the user to enter the number of daily steps and view the results such as calories burned and daily progress.
+
+2. Application Logic
+This component is responsible for processing the user input. It takes the number of steps entered by the user and calculates the estimated calories burned using a simple formula. It also prepares the data to be shown on the interface.
+
+3. Data Storage
+This part stores the user’s data, such as the number of steps, calculated calories, and the date. It helps keep track of daily activity over time.
+
+Interaction Overview:
+The user enters data through the frontend → the application logic processes the data → the results are stored → the final output is displayed to the user.
 
 ## 6. Process Architecture
-(To be filled)
+The Fitness Hub system follows a simple and clear process flow. It is designed to handle user actions in a direct and sequential way.
+
+1. User Input
+The user opens the web application and enters the number of steps for the day.
+
+2. Data Processing
+The system receives the input and calculates the estimated calories burned based on the entered steps.
+
+3. Data Storage
+After processing, the system saves the data for future reference and tracking.
+
+4. Output Display
+The system displays the results immediately, including steps and calories burned.
 
 ## 7. Development Architecture
 (To be filled)
