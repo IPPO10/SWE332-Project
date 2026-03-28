@@ -40,8 +40,6 @@ This component is responsible for processing the user input. It takes the number
 3. Data Storage
 This part stores the user’s data, such as the number of steps, calculated calories, and the date. It helps keep track of daily activity over time.
 
-Interaction Overview:
-The user enters data through the frontend → the application logic processes the data → the results are stored → the final output is displayed to the user.
 
 ## 6. Process Architecture
 The Fitness Hub system follows a simple and clear process flow. It is designed to handle user actions in a direct and sequential way.
