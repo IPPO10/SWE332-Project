@@ -88,8 +88,8 @@ User details
 .Main Feature
 
 ## 8. Physical Architecture
-(To be filled)
-
+The physical architecture of Fitness Hub includes the hardware and devices needed for the system to work. Users can access the website through a computer, laptop, tablet, or smartphone. They use input devices such as a keyboard, mouse, or touchscreen to enter information like calories, workouts, and fitness goals.
+The system displays information through output devices such as monitors and smartphone screens. All user requests are processed through a web server and application server, which handle login, calorie calculations, and workout tracking.
 ## 9. Scenarios
 (To be filled)
 
