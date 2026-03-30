@@ -57,7 +57,35 @@ After processing, the system saves the data for future reference and tracking.
 The system displays the results immediately, including steps and calories burned.
 
 ## 7. Development Architecture
-(To be filled)
+Frontend:
+
+The frontend is the part users interact with.
+
+.Login and registration pages
+.User dashboard
+.Calories tracker page
+.Workout page
+.Profile page
+.Responsive design for mobile and desktop
+
+Backend:
+
+The backend handles the system logic and data processing.
+
+.User authentication
+.Calories calculation
+.Workout tracking
+.Goal setting
+.Data storage management
+.Database
+
+The database stores user information and fitness records.
+User details
+.Calories consumed
+.Calories burned
+.Workout history
+.Fitness goals
+.Main Feature
 
 ## 8. Physical Architecture
 (To be filled)
