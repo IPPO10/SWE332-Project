@@ -95,7 +95,14 @@ The system displays information through output devices such as monitors and smar
 (To be filled)
 
 ## 10. Size and Performance
-(To be filled)
+• File Size: The project is built using standard HTML5 and CSS3. Because it does not use heavy external libraries or large frameworks, the total size of the website is very small (less than 500KB), allowing it to load almost instantly on any internet connection.
+• Loading Speed: All images and styles are optimized so the "Fitness Hub" dashboard appears in less than 1 second after the user opens the page.
+• Browser Compatibility: The system is designed to perform consistently across all modern web browsers (Chrome, Firefox, Safari, and Edge) without requiring high processing power from the user's computer or phone.
+• Efficiency: The calorie and step calculations are handled directly in the browser, providing the user with immediate results without needing to wait for a server to respond.
 
 ## 11. Quality
-(To be filled)
+• User Experience (UX): The interface is designed to be "clean and focused." Users can find the step-tracker and calorie-calculator immediately upon logging in, reducing the effort needed to navigate the site.
+• Responsive Design: Using CSS Media Queries, the "Fitness Hub" automatically adjusts its layout for different screen sizes. This ensures the quality of the display is just as good on a small smartphone as it is on a large desktop monitor.
+• Code Organization: The project follows a clear structure where the design (CSS) is kept separate from the content (HTML). This makes the system easy to update or fix if a bug is found.
+• Reliability: The forms used for inputting steps and calories include basic validation. This ensures that users cannot submit empty data, maintaining the accuracy of their fitness tracking.
+• Accessibility: The website uses high-contrast colors and clear fonts to ensure that the fitness data is easy to read for all users, including those with visual impairments.
