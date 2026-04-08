@@ -1,10 +1,10 @@
 # Fitness Hub
 
 ## Team Details
-- Yazid Hassan Ahmed — 230513611
-- Salman Raid — 230513483
-- Yusuf Yusuf Kabiru — 230513482
-- Ibrahim Alesayi — 230513703
+- Yazid Hassan Ahmed — 230513611 (Yazeedmaisari)
+- Salman Raid — 230513483        (salmanalesayix0)
+- Yusuf Yusuf Kabiru — 230513482 (YusuffKabiru)
+- Ibrahim Alesayi — 230513703    (IPPO10)
 
 ## Project Introduction
 Fitness Hub is a web-based fitness and health tracking system designed to help users monitor their daily activity and maintain a healthier lifestyle. The system allows users to track steps, estimate calories burned, and view their progress through a simple and user-friendly interface.
