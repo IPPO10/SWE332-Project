@@ -1,115 +1,109 @@
 # Fitness Hub - Software Architecture
 
 ## 1. Scope
-The Fitness Hub system is a web-based application designed to help users monitor their daily physical activity and maintain a healthier lifestyle. The system will allow users to track steps, estimate calories burned, and view their daily progress through a simple interface.
-The scope of this project focuses on basic fitness tracking features and does not include advanced integrations such as real-time sensor data or external health device synchronization. 
+The Fitness Hub system is a web-based fitness application designed to help users estimate their daily calorie needs and support basic health-related decision making. The system allows users to log in, register, or continue as guests. Users can enter personal information such as age, height, weight, gender, and activity level, and the system calculates an estimated daily calorie requirement.
+
+The application also allows users to select a goal such as maintaining weight, losing weight, or gaining weight. Based on the selected goal, the system provides a recommended daily calorie target. The scope of this project focuses on basic calorie calculation and goal selection, and does not include advanced integrations such as wearable devices, live health tracking, or external fitness APIs.
 
 ## 2. References
-- Course lecture slides from SWE332 Software Architecture
-- The 4+1 Architectural View Model by Philippe Kruchten
-- GitHub Markdown Guide
-- Online resources related to web-based system design
+- SWE332 Software Architecture course lecture slides (UZEM platform)
+- [4+1 Architectural View Model (Wikipedia)](https://en.wikipedia.org/wiki/4%2B1_architectural_view_model)
+- [GitHub Markdown Guide](https://guides.github.com/features/mastering-markdown/)
+- [Web Application Architecture Basics](https://www.geeksforgeeks.org/web-application-architecture/)
+
 ## 3. Software Architecture
-The Fitness Hub system follows a simplified version of the 4+1 architectural view model. The system is designed as a web-based application that separates the user interface, application logic, and system structure into different views.
+The Fitness Hub system follows a simplified version of the 4+1 architectural view model. The system is designed as a web-based application that separates the user interface, application logic, and execution structure into different views.
 
-The architecture focuses on clarity and simplicity, allowing each part of the system to be easily understood and developed. The main components include the user interface (frontend), the logic for handling user input and calculations, and the structure used to organize the project files.
+The architecture focuses on simplicity and clarity so that the system can be easily understood and developed. The main parts of the system include the user interface, the calorie calculation logic, and the structure used to organize the files and user flow.
 
-This approach helps ensure that the system is easy to maintain, scalable for future improvements, and suitable for a small-scale project developed within a limited time.
+This approach helps ensure that the system is easy to maintain and suitable for a small-scale course project developed within limited time and resources.
+
 ## 4. Architectural Goals & Constraints
+
 ### Goals
 - Provide a simple and user-friendly interface
-- Ensure the system is easy to develop and maintain
-- Allow users to easily track and view their daily activity
+- Allow users to estimate daily calorie needs easily
+- Support both logged-in users and guest users
 - Keep the system lightweight and responsive
+- Make the project easy to develop and maintain
 
 ### Constraints
 - The system will be developed as a web-based application
 - Limited time and resources as this is a course project
-- No use of advanced external APIs or hardware integrations
-- The system will focus on core features only (steps and calorie estimation)
+- No advanced external APIs or device integrations
+- The system will focus on calorie estimation and basic goal selection only
+- Guest users will be able to use the system without storing data permanently
 
 ## 5. Logical Architecture
-The Fitness Hub system is divided into three main components, where each component has a specific role in the system.
+The Fitness Hub system is divided into four main components:
 
-1. Frontend (User Interface)
-This is the part that the user interacts with directly. It allows the user to enter the number of daily steps and view the results such as calories burned and daily progress.
+1. User Access Component  
+This part manages how users enter the system. It includes login, registration, and guest access.
 
-2. Application Logic
-This component is responsible for processing the user input. It takes the number of steps entered by the user and calculates the estimated calories burned using a simple formula. It also prepares the data to be shown on the interface.
+2. User Information Input Component  
+This component allows users to enter personal data such as age, height, weight, gender, and activity level.
 
-3. Data Storage
-This part stores the user’s data, such as the number of steps, calculated calories, and the date. It helps keep track of daily activity over time.
+3. Calorie Calculation Component  
+This part processes the entered information and calculates estimated daily calorie needs. It also adjusts the result based on the selected goal, such as maintaining, losing, or gaining weight.
 
+4. Result Display Component  
+This component presents the calculated calorie targets and related information clearly to the user.
 
 ## 6. Process Architecture
-The Fitness Hub system follows a simple and clear process flow. It is designed to handle user actions in a direct and sequential way.
+The Fitness Hub system follows a simple process flow:
 
-1. User Input
-The user opens the web application and enters the number of steps for the day.
+1. Access Selection  
+The user opens the website and chooses to log in, register, or continue as a guest.
 
-2. Data Processing
-The system receives the input and calculates the estimated calories burned based on the entered steps.
+2. Data Entry  
+The user enters personal information such as age, height, weight, gender, and activity level.
 
-3. Data Storage
-After processing, the system saves the data for future reference and tracking.
+3. Goal Selection  
+The user selects a fitness goal, such as maintaining weight, losing weight, or gaining weight.
 
-4. Output Display
-The system displays the results immediately, including steps and calories burned.
+4. Data Processing  
+The system processes the entered data and calculates the estimated daily calorie requirement.
+
+5. Output Display  
+The system displays the result and shows the recommended calorie target based on the chosen goal.
 
 ## 7. Development Architecture
-Frontend:
+The system is developed using standard web technologies:
 
-The frontend is the part users interact with.
+- HTML for page structure
+- CSS for styling and layout
+- JavaScript for user interaction and calorie calculation logic
 
-.Login and registration pages
-.User dashboard
-.Calories tracker page
-.Workout page
-.Profile page
-.Responsive design for mobile and desktop
-
-Backend:
-
-The backend handles the system logic and data processing.
-
-.User authentication
-.Calories calculation
-.Workout tracking
-.Goal setting
-.Data storage management
-.Database
-
-The database stores user information and fitness records.
-User details
-.Calories consumed
-.Calories burned
-.Workout history
-.Fitness goals
-.Main Feature
+The project is organized into separate files for structure, styling, and functionality. This makes the system easier to maintain, update, and test during development.
 
 ## 8. Physical Architecture
-The physical architecture of Fitness Hub includes the hardware and devices needed for the system to work. Users can access the website through a computer, laptop, tablet, or smartphone. They use input devices such as a keyboard, mouse, or touchscreen to enter information like calories, workouts, and fitness goals.
+The system runs through a web browser and does not require special hardware.
 
-The system displays information through output devices such as monitors and smartphone screens. All user requests are processed through a web server and application server, which handle login, calorie calculations, and workout tracking.
+- Users can access the system using devices such as laptops, tablets, or smartphones
+- The application runs directly in the browser
+- Logged-in and guest users use the same web interface
+- No advanced server or hardware infrastructure is required for this version of the project
+
 ## 9. Scenarios
-(To be filled)
+
+### Scenario 1: Guest User Calculation
+A user opens the website and chooses to continue as a guest. The user enters personal information, selects a goal, and receives a daily calorie recommendation without saving data.
+
+### Scenario 2: Logged-in User Calculation
+A registered user logs into the system, enters personal information, selects a goal, and views the calculated calorie target.
+
+### Scenario 3: Goal Comparison
+A user enters personal information once and compares calorie recommendations for maintaining weight, losing weight, and gaining weight.
 
 ## 10. Size and Performance
-• File Size: The project is built using standard HTML5 and CSS3. Because it does not use heavy external libraries or large frameworks, the total size of the website is very small (less than 500KB), allowing it to load almost instantly on any internet connection.
-
-• Loading Speed: All images and styles are optimized so the "Fitness Hub" dashboard appears in less than 1 second after the user opens the page.
-
-• Browser Compatibility: The system is designed to perform consistently across all modern web browsers (Chrome, Firefox, Safari, and Edge) without requiring high processing power from the user's computer or phone.
-
-• Efficiency: The calorie and step calculations are handled directly in the browser, providing the user with immediate results without needing to wait for a server to respond.
+- The project uses lightweight web technologies such as HTML, CSS, and JavaScript
+- Pages are expected to load quickly because the system does not rely on heavy frameworks
+- Calorie calculations are performed instantly within the browser
+- The system is designed to work smoothly on modern browsers such as Chrome, Firefox, Safari, and Edge
 
 ## 11. Quality
-• User Experience (UX): The interface is designed to be "clean and focused." Users can find the step-tracker and calorie-calculator immediately upon logging in, reducing the effort needed to navigate the site.
-
-• Responsive Design: Using CSS Media Queries, the "Fitness Hub" automatically adjusts its layout for different screen sizes. This ensures the quality of the display is just as good on a small smartphone as it is on a large desktop monitor.
-
-• Code Organization: The project follows a clear structure where the design (CSS) is kept separate from the content (HTML). This makes the system easy to update or fix if a bug is found.
-
-• Reliability: The forms used for inputting steps and calories include basic validation. This ensures that users cannot submit empty data, maintaining the accuracy of their fitness tracking.
-
-• Accessibility: The website uses high-contrast colors and clear fonts to ensure that the fitness data is easy to read for all users, including those with visual impairments.
+- User Experience: The interface is designed to be simple and easy to understand
+- Responsiveness: The system works on both desktop and mobile devices
+- Maintainability: Code is separated by purpose, making updates easier
+- Reliability: Basic form validation helps prevent invalid input
+- Accessibility: Clear text and readable layout improve usability for different users
