@@ -12,6 +12,10 @@ The application also allows users to select a goal such as maintaining weight, l
 - [Web Application Architecture Basics](https://www.geeksforgeeks.org/web-application-architecture/)
 
 ## 3. Software Architecture
+
+### Software Architecture Diagram
+![Software Architecture Diagram](./images/software-architecture-diagram.png)
+
 The Fitness Hub system follows a simplified version of the 4+1 architectural view model. The system is designed as a web-based application that separates the user interface, application logic, and execution structure into different views.
 
 The architecture focuses on simplicity and clarity so that the system can be easily understood and developed. The main parts of the system include the user interface, the calorie calculation logic, and the structure used to organize the files and user flow.
