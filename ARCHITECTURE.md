@@ -54,8 +54,11 @@ This part processes the entered information and calculates estimated daily calor
 This component presents the calculated calorie targets and related information clearly to the user.
 
 ## 6. Process Architecture
-The Fitness Hub system follows a simple process flow:
 
+### Process Architecture Diagram
+![Process Architecture Diagram](./images/process-architecture-diagram.png)
+
+The Fitness Hub system follows a simple process flow:
 1. Access Selection  
 The user opens the website and chooses to log in, register, or continue as a guest.
 
