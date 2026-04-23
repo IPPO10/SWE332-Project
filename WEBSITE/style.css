@@ -1,0 +1,745 @@
+/* ============================================================
+   Fitness Hub — style.css
+   All styling for the application.
+   Organized by: Base → Header → Pages → Components
+   ============================================================ */
+
+/* ── CSS Variables (color palette & fonts) ── */
+:root {
+  --orange:       #E8540A;
+  --orange-dark:  #C4420A;
+  --orange-light: #FF7A3D;
+  --dark:         #1A0F0A;
+  --dark-2:       #2D1A10;
+  --cream:        #FDF6EE;
+  --warm-white:   #FFFAF5;
+  --text:         #3A2010;
+  --text-muted:   #7A5A44;
+  --border:       rgba(232, 84, 10, 0.15);
+
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+}
+
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+header {
+  background: var(--dark);
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: var(--orange-light);
+}
+
+.logo span {
+  color: #ffffff;
+}
+
+/* Guest header buttons */
+.header-guest {
+  display: flex;
+  gap: 10px;
+}
+
+.header-guest button {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: #ffffff;
+  transition: all 0.2s;
+}
+
+.header-guest button:hover {
+  border-color: var(--orange-light);
+  color: var(--orange-light);
+}
+
+/* Logged-in user header */
+.header-user {
+  display: none;
+  align-items: center;
+  gap: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+}
+
+.header-user strong {
+  color: var(--orange-light);
+}
+
+.header-user button {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  font-family: var(--font-body);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.header-user button:hover {
+  color: #ffffff;
+}
+
+/* ============================================================
+   PAGE SYSTEM
+   Pages are hidden by default, shown with .active class
+   ============================================================ */
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+/* ============================================================
+   HOME PAGE
+   ============================================================ */
+#page-home {
+  min-height: calc(100vh - 64px);
+  display: none; /* overridden when .active */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  background: linear-gradient(160deg, var(--dark) 0%, var(--dark-2) 60%, var(--cream) 100%);
+  text-align: center;
+}
+
+#page-home.active {
+  display: flex;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--orange-light);
+  margin-bottom: 1rem;
+}
+
+#page-home h1 {
+  font-family: var(--font-display);
+  font-size: clamp(56px, 10vw, 96px);
+  color: #ffffff;
+  line-height: 0.95;
+  letter-spacing: 4px;
+  margin-bottom: 1.5rem;
+}
+
+#page-home h1 span {
+  color: var(--orange-light);
+}
+
+.home-sub {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 420px;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.home-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn-orange {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 13px 32px;
+  background: var(--orange);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-orange:hover {
+  background: var(--orange-light);
+}
+
+.btn-outline {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 32px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.btn-ghost {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  font-family: var(--font-body);
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 8px 0;
+}
+
+.btn-ghost:hover {
+  color: #ffffff;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 13px;
+  background: var(--orange);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.5rem;
+}
+
+.btn-submit:hover {
+  background: var(--orange-dark);
+}
+
+.btn-outline-dark {
+  padding: 11px 24px;
+  background: transparent;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 2rem;
+}
+
+.btn-outline-dark:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+/* ============================================================
+   AUTH PAGES (Login & Register)
+   ============================================================ */
+.auth-wrapper {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.auth-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 32px rgba(232, 84, 10, 0.06);
+}
+
+.auth-card h2 {
+  font-family: var(--font-display);
+  font-size: 36px;
+  letter-spacing: 2px;
+  color: var(--dark);
+  margin-bottom: 0.25rem;
+}
+
+.auth-card h2 span {
+  color: var(--orange);
+}
+
+.auth-sub {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 1.75rem;
+}
+
+.error-msg {
+  background: #FEE2E2;
+  color: #991B1B;
+  font-size: 13px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.auth-switch a {
+  color: var(--orange);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   FORMS (shared across pages)
+   ============================================================ */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--warm-white);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--orange);
+  background: #ffffff;
+}
+
+/* Gender toggle buttons */
+.gender-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.gender-btn {
+  padding: 11px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  background: var(--warm-white);
+  font-size: 14px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.gender-btn.active {
+  border-color: var(--orange);
+  background: rgba(232, 84, 10, 0.06);
+  color: var(--orange);
+}
+
+/* ============================================================
+   CALCULATOR & RESULTS PAGES — SHARED LAYOUT
+   ============================================================ */
+.calc-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-family: var(--font-display);
+  font-size: 48px;
+  letter-spacing: 2px;
+  color: var(--dark);
+  line-height: 1;
+}
+
+.page-header p {
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  font-size: 15px;
+}
+
+/* Card component */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border);
+}
+
+.card-title {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Activity level buttons */
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.activity-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  background: var(--warm-white);
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.activity-btn.active {
+  border-color: var(--orange);
+  background: rgba(232, 84, 10, 0.05);
+}
+
+.activity-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.activity-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.activity-btn.active .activity-name {
+  color: var(--orange);
+  font-weight: 600;
+}
+
+.activity-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.activity-multiplier {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--orange);
+}
+
+/* ============================================================
+   RESULTS PAGE
+   ============================================================ */
+
+/* Main calorie hero block */
+.result-hero {
+  background: var(--dark);
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.result-label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 0.5rem;
+}
+
+.result-number {
+  font-family: var(--font-display);
+  font-size: 80px;
+  color: var(--orange-light);
+  letter-spacing: 4px;
+  line-height: 1;
+}
+
+.result-unit {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 0.25rem;
+}
+
+.result-goal-badge {
+  display: inline-block;
+  margin-top: 1rem;
+  background: rgba(232, 84, 10, 0.2);
+  color: var(--orange-light);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+
+/* Goal selection cards */
+.goal-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.goal-card {
+  background: #ffffff;
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.goal-card:hover {
+  border-color: rgba(232, 84, 10, 0.4);
+}
+
+.goal-card.selected {
+  border-color: var(--orange);
+  background: rgba(232, 84, 10, 0.04);
+}
+
+.goal-icon {
+  font-size: 26px;
+  margin-bottom: 0.5rem;
+}
+
+.goal-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.goal-kcal {
+  font-family: var(--font-display);
+  font-size: 28px;
+  color: var(--orange);
+  letter-spacing: 1px;
+}
+
+.goal-note {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Stats grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Save bar for logged-in users */
+.save-bar {
+  background: rgba(232, 84, 10, 0.05);
+  border: 1px dashed rgba(232, 84, 10, 0.3);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  font-size: 14px;
+}
+
+/* Guest notice */
+.guest-notice {
+  background: rgba(232, 84, 10, 0.05);
+  border: 1px dashed rgba(232, 84, 10, 0.3);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.guest-notice a {
+  color: var(--orange);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Saved history entries */
+.saved-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  gap: 1rem;
+}
+
+.saved-entry:last-child {
+  border-bottom: none;
+}
+
+.saved-entry-goal {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.saved-entry-meta {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.saved-entry-kcal {
+  font-weight: 600;
+  color: var(--orange);
+  white-space: nowrap;
+}
+
+/* ============================================================
+   TOAST NOTIFICATION
+   ============================================================ */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--dark);
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  border-left: 3px solid var(--orange);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   RESPONSIVE — Mobile
+   ============================================================ */
+@media (max-width: 560px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .goal-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .calc-container {
+    padding: 2rem 1rem;
+  }
+}
