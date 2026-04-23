@@ -236,7 +236,7 @@ function calculate() {
 
   // Validate inputs
   if (!age || !weight || !height) {
-    showToast('Please fill in all fields.');
+    showToast('Please enter all values.');
     return;
   }
   if (age < 10 || age > 100) {
