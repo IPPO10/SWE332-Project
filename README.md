@@ -14,5 +14,5 @@ Fitness Hub is a web-based fitness and health tracking system designed to help u
 
 ## Youtube Video
 https://www.youtube.com/watch?v=R2vsPj7I0v0 
-## Site's link
+## WebSite's link
 https://ippo10.github.io/SWE332-Project/WEBSITE/index.html
