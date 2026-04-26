@@ -11,3 +11,6 @@ Fitness Hub is a web-based fitness and health tracking system designed to help u
 
 ## Architecture Link
 [View Architecture](./ARCHITECTURE.md)
+
+## Youtube Video
+https://www.youtube.com/watch?v=R2vsPj7I0v0 
